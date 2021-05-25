@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        <nav class="admin-navbar">
+          <ul class="navbar-nav ">
+              <li class="nav-item {{ pageActive == 'home' ? 'active' : '' }}">
+                  <a class="btn btn-nav" href="/admin">Home</a>
+              </li>
+
+              <li class="nav-item {{ pageActive == 'projects' ? 'active' : '' }}">
+                  <a class="btn btn-nav" href="/admin/projects">Projets</a>
+              </li>
+
+              <li class="nav-item {{ pageActive == 'states' ? 'active' : '' }}">
+                  <a class="btn btn-nav" href="/admin/states">Etats</a>
+              </li>
+              <li class="nav-item {{ pageActive == 'skills' ? 'active' : '' }}">
+                  <a class="btn btn-nav" href="/admin/skills">Compétences</a>
+              </li>
+              <li class="nav-item {{ pageActive == 'account' ? 'active' : '' }}">
+                  <a class="btn btn-nav" href="/admin/account/{{ app.user.id }}">Compte</a>
+              </li>
+              <li class="nav-item">
+                  <a class="btn btn-nav btn-logout" href=" /logout">Déconnexion</a>
+              </li>
+          </ul>
+        </nav>
+        {% block body %}{% endblock %}
+    </body>
+</html>

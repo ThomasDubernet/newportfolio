@@ -1,0 +1,12 @@
+{% extends 'panel.html.twig' %}
+
+{% block title %}Create Skill{% endblock %}
+
+{% block body %}
+	<h2 style="text-align:center">Création d'une compétence</h2>
+
+	<a href="/admin/skills" class="btn btn-nav">Retour</a>
+
+	
+  {{ include('forms/product.html.twig', {form: form, button: 'Créer'}) }}
+{% endblock %}

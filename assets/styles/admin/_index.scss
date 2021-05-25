@@ -1,0 +1,18 @@
+@import './buttons';
+
+body {
+  background-color: lightgray;
+}
+
+
+.admin-navbar {
+  margin-bottom: 2rem;
+  .navbar-nav {
+    padding-inline-start: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+

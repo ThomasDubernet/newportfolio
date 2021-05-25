@@ -1,0 +1,12 @@
+{% extends 'panel.html.twig' %}
+
+{% block title %}Edit Skill{% endblock %}
+
+{% block body %}
+	<h2 style="text-align:center">Modifier une compétence</h2>
+
+	<a href="/admin/skills" class="btn btn-nav">Retour</a>
+
+	
+  {{ include('forms/product.html.twig', {form: form, button: 'Modifier'}) }}
+{% endblock %}

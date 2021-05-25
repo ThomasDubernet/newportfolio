@@ -1,0 +1,15 @@
+{% extends 'panel.html.twig' %}
+
+{% block title %}Admin T4Code{% endblock %}
+
+{% block body %}
+	<h2 style="text-align:center">Compétences</h2>
+
+	<a href="/admin/skills/create" class="btn btn-create">Créer</a>
+
+	<ul>
+		{% for item in skills %}
+				<li><a href="/admin/skills/{{ item.id }}">{{ item.name }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

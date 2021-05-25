@@ -1,0 +1,9 @@
+{% extends 'panel.html.twig' %}
+
+{% block title %}Compte
+	{{ currentUser.username }}
+{% endblock %}
+
+{% block body %}
+	{{ dump(currentUser) }}
+{% endblock %}

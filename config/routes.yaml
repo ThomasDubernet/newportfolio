@@ -1,0 +1,27 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+logout:
+  path: /logout
+
+#Admin
+
+#Projects
+
+#States
+
+#Skills
+index_skills:
+  path: /admin/skills
+  controller: \App\Controller\SkillsController::index
+show_skills:
+  path: /admin/skills/:id
+  controller: \App\Controller\SkillsController::show
+create_skills:
+  path: /admin/skills/create
+  controller: \App\Controller\SkillsController::create
+edit_skills:
+  path: /admin/skills/edit/:id
+  controller: \App\Controller\SkillsController::edit
+
